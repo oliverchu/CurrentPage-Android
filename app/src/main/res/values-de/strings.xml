@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Aktuelle Seite</string>
+    <string name="app_subtitle">Live-Inspektor für Vordergrund-App und Activity</string>
+
+    <string name="current_foreground_label">LETZTE AUFZEICHNUNG</string>
+    <string name="current_none">Noch nichts erkannt</string>
+    <string name="current_hint">Öffne die Ziel-App; Paket und Activity erscheinen hier.</string>
+    <string name="last_seen">Letzte Änderung: %1$s</string>
+
+    <string name="monitor_title">Schwebemonitor</string>
+    <string name="monitor_summary">Zeigt die aktuelle Activity in einem schwebenden Fenster</string>
+
+    <string name="show_tag_button_title">Layout-ID-Schaltfläche</string>
+    <string name="show_tag_button_summary">Zeigt die Schaltfläche „Layout-IDs aufnehmen“ im schwebenden Fenster</string>
+
+    <string name="target_title">Debug-Ziel</string>
+    <string name="target_summary">Zeigt das schwebende Fenster und zeichnet nur auf, solange diese App im Vordergrund ist</string>
+    <string name="target_none">Nicht ausgewählt — alle Apps werden überwacht</string>
+    <string name="target_pick">App auswählen</string>
+    <string name="target_clear">Löschen</string>
+    <string name="target_pick_title">Debug-Ziel auswählen</string>
+    <string name="target_pick_empty">Keine startbaren Apps gefunden</string>
+    <string name="target_search_hint">App-Name oder Paket suchen</string>
+    <string name="target_search_empty">Keine passenden Apps</string>
+    <string name="target_selected_toast">Ausgewählt: %1$s. Öffne sie, um die Überwachung zu starten.</string>
+
+    <string name="monitor_state_off">Überwachung ist aus</string>
+    <string name="monitor_state_all">Alle Apps werden überwacht</string>
+    <string name="monitor_state_target_active">Ziel-App im Vordergrund · Überwachung</string>
+    <string name="monitor_state_waiting_target">Warte auf die Ziel-App im Vordergrund</string>
+    <string name="monitor_state_no_connection">Der Bedienungshilfen-Dienst ist nicht verbunden</string>
+
+    <string name="accessibility_title">Bedienungshilfen-Dienst</string>
+    <string name="accessibility_summary">Erforderlich, um Fensteränderungen zu lesen. Bei Ausfall der Bedienungshilfen erlaube den Autostart und entferne Akku-Beschränkungen (getestet auf HyperOS 3).</string>
+    <string name="accessibility_state_connected">Verbunden</string>
+    <string name="accessibility_state_enabled_not_connected">Aktiviert, aber nicht verbunden</string>
+    <string name="accessibility_state_disabled">Nicht aktiviert</string>
+    <string name="enable_now">Jetzt aktivieren</string>
+    <string name="open_settings">Einstellungen öffnen</string>
+    <string name="button_reconnect">Neu verbinden</string>
+
+    <string name="keepalive_title">Am-Leben-Halten (bei Verlust der Bedienungshilfen)</string>
+    <string name="keepalive_summary">Manche Systeme (u. a. MIUI/HyperOS) beschränken Hintergrund-Apps, wodurch der Bedienungshilfen-Ereignisstrom abbrechen und das schwebende Fenster verschwinden kann. Wenn die Bedienungshilfen ausfallen, erlaube den „Autostart“ und setze die Akku-Richtlinie auf „Keine Einschränkungen“. Getestet auf HyperOS 3.</string>
+    <string name="keepalive_battery">Akku-Richtlinie</string>
+    <string name="keepalive_autostart">Autostart</string>
+    <string name="keepalive_battery_hint">Öffne auf der App-Infoseite „Akku sparen“ und wähle „Keine Einschränkungen“.</string>
+    <string name="keepalive_autostart_failed">Autostart-Seite nicht gefunden; App-Info wurde geöffnet.</string>
+    <string name="keepalive_battery_checking">Akku-Richtlinie: wird geprüft…</string>
+    <string name="keepalive_battery_ok">Akku-Richtlinie: keine Einschränkungen ✓</string>
+    <string name="keepalive_battery_bad">Akku-Richtlinie: NICHT ohne Einschränkungen — das schwebende Fenster wird nicht mehr aktualisiert</string>
+    <string name="keepalive_autostart_status">Autostart: Manche Systeme (z. B. HyperOS) geben den Status nicht frei; bitte bestätige, dass er aktiviert ist</string>
+
+    <string name="history_title">Letzte Änderungen</string>
+    <string name="history_empty">Noch keine Einträge</string>
+    <string name="clear_history">Löschen</string>
+    <string name="copy_activity">Kopieren</string>
+    <string name="toast_copied">In die Zwischenablage kopiert</string>
+
+    <string name="principle">Funktionsweise: Android bietet keine öffentliche API, um die Vordergrund-Activity einer anderen App zu lesen. Diese App empfängt Fensteränderungs-Ereignisse über einen AccessibilityService. Mit einem Debug-Ziel zeigt sie das schwebende Fenster nur, solange diese App im Vordergrund ist, und zeichnet nur dann auf; beim Wechsel zu einer anderen App wird es sofort geschlossen. Das schwebende Fenster nutzt TYPE_ACCESSIBILITY_OVERLAY und wird vom Bedienungshilfen-Dienst hinzugefügt; die Berechtigung „Über anderen Apps anzeigen“ ist daher nicht nötig.</string>
+
+    <string name="accessibility_description">Liest Fensteränderungs-Ereignisse, um Paket und Activity-Name der aktuellen App in einem schwebenden Fenster anzuzeigen.</string>
+
+    <string name="dialog_accessibility_title">Bedienungshilfen-Dienst erforderlich</string>
+    <string name="dialog_accessibility_message">Aktiviere „Aktuelle Seite“ in den Bedienungshilfen und kehre dann zu dieser App zurück.</string>
+    <string name="dialog_accessibility_positive">Einstellungen öffnen</string>
+    <string name="dialog_accessibility_negative">Abbrechen</string>
+
+    <string name="dialog_reconnect_title">Bedienungshilfen-Dienst ist nicht verbunden</string>
+    <string name="dialog_reconnect_message">Laut System ist der Dienst aktiviert, aber nicht wirklich verbunden. Das passiert oft, wenn das System die App aus dem Speicher entfernt (häufig bei MIUI/HyperOS). Schalte „Aktuelle Seite“ in den Bedienungshilfen aus und wieder ein. Erlaube außerdem den Autostart und entferne Akku-Beschränkungen.</string>
+
+    <string name="overlay_waiting">Warte auf Fensteränderung…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">Erweitern</string>
+    <string name="overlay_collapse">Einklappen</string>
+    <string name="toast_no_ids">Keine Layout-IDs auf dieser Seite gefunden</string>
+
+    <string name="tile_subtitle_idle">Keine Überwachung</string>
+    <string name="tile_subtitle_all">Alle Apps werden überwacht</string>
+    <string name="tile_subtitle_target">Überwachung: %1$s</string>
+    <string name="tile_subtitle_waiting">Warte auf %1$s</string>
+
+    <string name="shortcut_toggle_short">Monitor umschalten</string>
+    <string name="shortcut_toggle_long">Activity-Monitor umschalten</string>
+</resources>

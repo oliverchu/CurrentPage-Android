@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Текущая страница</string>
+    <string name="app_subtitle">Инспектор активного приложения и Activity в реальном времени</string>
+
+    <string name="current_foreground_label">ПОСЛЕДНИЙ СНИМОК</string>
+    <string name="current_none">Пока ничего не обнаружено</string>
+    <string name="current_hint">Откройте целевое приложение — здесь появятся его пакет и Activity.</string>
+    <string name="last_seen">Последнее изменение: %1$s</string>
+
+    <string name="monitor_title">Плавающий монитор</string>
+    <string name="monitor_summary">Показывает текущую Activity в плавающем окне</string>
+
+    <string name="show_tag_button_title">Кнопка ID макета</string>
+    <string name="show_tag_button_summary">Показывает в плавающем окне кнопку «снимок ID макета»</string>
+
+    <string name="target_title">Цель отладки</string>
+    <string name="target_summary">Показывает плавающее окно и записывает только пока это приложение на переднем плане</string>
+    <string name="target_none">Не выбрано — отслеживаются все приложения</string>
+    <string name="target_pick">Выбрать приложение</string>
+    <string name="target_clear">Очистить</string>
+    <string name="target_pick_title">Выбрать цель отладки</string>
+    <string name="target_pick_empty">Запускаемые приложения не найдены</string>
+    <string name="target_search_hint">Поиск по названию или пакету</string>
+    <string name="target_search_empty">Нет подходящих приложений</string>
+    <string name="target_selected_toast">Выбрано: %1$s. Откройте его, чтобы начать отслеживание.</string>
+
+    <string name="monitor_state_off">Отслеживание выключено</string>
+    <string name="monitor_state_all">Отслеживаются все приложения</string>
+    <string name="monitor_state_target_active">Целевое приложение на переднем плане · отслеживание</string>
+    <string name="monitor_state_waiting_target">Ожидание выхода целевого приложения на передний план</string>
+    <string name="monitor_state_no_connection">Служба доступности не подключена</string>
+
+    <string name="accessibility_title">Служба доступности</string>
+    <string name="accessibility_summary">Необходима для чтения изменений окон. Если доступность пропала, попробуйте разрешить автозапуск и снять ограничения батареи (проверено на HyperOS 3).</string>
+    <string name="accessibility_state_connected">Подключено</string>
+    <string name="accessibility_state_enabled_not_connected">Включено, но не подключено</string>
+    <string name="accessibility_state_disabled">Не включено</string>
+    <string name="enable_now">Включить сейчас</string>
+    <string name="open_settings">Открыть настройки</string>
+    <string name="button_reconnect">Переподключить</string>
+
+    <string name="keepalive_title">Поддержка работы (при потере доступности)</string>
+    <string name="keepalive_summary">Некоторые системы (включая MIUI/HyperOS) ограничивают фоновые приложения, из-за чего поток событий доступности может прерваться, а плавающее окно — пропадать. Если доступность пропала, попробуйте разрешить «Автозапуск» и установить политику батареи «Без ограничений». Проверено на HyperOS 3.</string>
+    <string name="keepalive_battery">Политика батареи</string>
+    <string name="keepalive_autostart">Автозапуск</string>
+    <string name="keepalive_battery_hint">На странице информации о приложении откройте «Экономия заряда» и выберите «Без ограничений».</string>
+    <string name="keepalive_autostart_failed">Страница автозапуска не найдена; открыта информация о приложении.</string>
+    <string name="keepalive_battery_checking">Политика батареи: проверка…</string>
+    <string name="keepalive_battery_ok">Политика батареи: без ограничений ✓</string>
+    <string name="keepalive_battery_bad">Политика батареи: НЕ без ограничений — плавающее окно перестанет обновляться</string>
+    <string name="keepalive_autostart_status">Автозапуск: некоторые системы (например, HyperOS) не показывают его состояние; проверьте, что он включён</string>
+
+    <string name="history_title">Последние изменения</string>
+    <string name="history_empty">Записей пока нет</string>
+    <string name="clear_history">Очистить</string>
+    <string name="copy_activity">Копировать</string>
+    <string name="toast_copied">Скопировано в буфер обмена</string>
+
+    <string name="principle">Как это работает: в Android нет публичного API для чтения Activity другого приложения на переднем плане. Приложение слушает события изменения окон через AccessibilityService. Если выбрано целевое приложение, плавающее окно показывается и запись ведётся только пока оно на переднем плане; при переходе в другое приложение окно сразу закрывается. Плавающее окно использует TYPE_ACCESSIBILITY_OVERLAY и добавляется службой доступности, поэтому разрешение «поверх других приложений» не требуется.</string>
+
+    <string name="accessibility_description">Считывает события изменения окон, чтобы показывать пакет и имя Activity текущего приложения в плавающем окне.</string>
+
+    <string name="dialog_accessibility_title">Требуется служба доступности</string>
+    <string name="dialog_accessibility_message">Включите «Текущая страница» в настройках доступности и вернитесь в это приложение.</string>
+    <string name="dialog_accessibility_positive">Открыть настройки</string>
+    <string name="dialog_accessibility_negative">Отмена</string>
+
+    <string name="dialog_reconnect_title">Служба доступности не подключена</string>
+    <string name="dialog_reconnect_message">Система сообщает, что служба включена, но на самом деле она не подключена. Обычно это происходит, когда система выгружает приложение (часто на MIUI/HyperOS). Выключите и снова включите «Текущая страница» в настройках доступности. Также разрешите автозапуск и снимите ограничения батареи.</string>
+
+    <string name="overlay_waiting">Ожидание изменения окна…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">Развернуть</string>
+    <string name="overlay_collapse">Свернуть</string>
+    <string name="toast_no_ids">На этой странице не найдено ID макета</string>
+
+    <string name="tile_subtitle_idle">Отслеживание выключено</string>
+    <string name="tile_subtitle_all">Отслеживаются все приложения</string>
+    <string name="tile_subtitle_target">Отслеживание: %1$s</string>
+    <string name="tile_subtitle_waiting">Ожидание %1$s</string>
+
+    <string name="shortcut_toggle_short">Переключить монитор</string>
+    <string name="shortcut_toggle_long">Переключить монитор Activity</string>
+</resources>

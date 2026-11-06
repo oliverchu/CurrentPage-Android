@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贴屏幕左缘：左侧品牌色 3dp 细条，卡片左侧直角、右侧圆角 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="14dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="14dp" />
+            <solid android:color="@color/overlay_background" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/overlay_stroke" />
+        </shape>
+    </item>
+    <!-- 满高、贴左缘的品牌色条（显式 3dp 宽，高度随卡片） -->
+    <item
+        android:width="3dp"
+        android:gravity="start">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/brand_primary" />
+        </shape>
+    </item>
+</layer-list>

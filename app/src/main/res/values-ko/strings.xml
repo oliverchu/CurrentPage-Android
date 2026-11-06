@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">현재 페이지</string>
+    <string name="app_subtitle">전경 앱 및 Activity 실시간 검사</string>
+
+    <string name="current_foreground_label">최근 캡처</string>
+    <string name="current_none">아직 감지된 항목이 없습니다</string>
+    <string name="current_hint">대상 앱을 열면 패키지와 Activity가 여기에 표시됩니다.</string>
+    <string name="last_seen">최근 변경: %1$s</string>
+
+    <string name="monitor_title">플로팅 모니터</string>
+    <string name="monitor_summary">현재 Activity를 플로팅 창에 표시</string>
+
+    <string name="show_tag_button_title">레이아웃 ID 버튼</string>
+    <string name="show_tag_button_summary">플로팅 창에 "레이아웃 ID 스냅샷" 버튼 표시</string>
+
+    <string name="target_title">디버그 대상</string>
+    <string name="target_summary">이 앱이 전경에 있을 때만 플로팅 창을 표시하고 기록합니다</string>
+    <string name="target_none">선택 안 함 — 모든 앱 모니터링</string>
+    <string name="target_pick">앱 선택</string>
+    <string name="target_clear">지우기</string>
+    <string name="target_pick_title">디버그 대상 선택</string>
+    <string name="target_pick_empty">실행 가능한 앱이 없습니다</string>
+    <string name="target_search_hint">앱 이름 또는 패키지 검색</string>
+    <string name="target_search_empty">일치하는 앱이 없습니다</string>
+    <string name="target_selected_toast">선택됨: %1$s. 앱을 열면 모니터링이 시작됩니다.</string>
+
+    <string name="monitor_state_off">모니터링 꺼짐</string>
+    <string name="monitor_state_all">모든 앱 모니터링 중</string>
+    <string name="monitor_state_target_active">대상 앱이 전경 · 모니터링 중</string>
+    <string name="monitor_state_waiting_target">대상 앱이 전경으로 오기를 기다리는 중</string>
+    <string name="monitor_state_no_connection">접근성 서비스가 연결되지 않았습니다</string>
+
+    <string name="accessibility_title">접근성 서비스</string>
+    <string name="accessibility_summary">창 변경을 읽으려면 필요합니다. 접근성이 끊기면 자동 시작 허용과 배터리 제한 해제를 시도해 보세요(HyperOS 3에서 확인됨).</string>
+    <string name="accessibility_state_connected">연결됨</string>
+    <string name="accessibility_state_enabled_not_connected">활성화되었지만 연결되지 않음</string>
+    <string name="accessibility_state_disabled">활성화되지 않음</string>
+    <string name="enable_now">지금 활성화</string>
+    <string name="open_settings">설정 열기</string>
+    <string name="button_reconnect">다시 연결</string>
+
+    <string name="keepalive_title">상시 실행 설정 (접근성이 끊길 때)</string>
+    <string name="keepalive_summary">일부 시스템(MIUI/HyperOS 포함)은 백그라운드 앱을 제한하여 접근성 이벤트가 끊기고 플로팅 창이 나타났다 사라질 수 있습니다. 접근성이 끊기면 "자동 시작"을 허용하고 배터리 정책을 "제한 없음"으로 설정해 보세요. HyperOS 3에서 동작을 확인했습니다.</string>
+    <string name="keepalive_battery">배터리 정책</string>
+    <string name="keepalive_autostart">자동 시작</string>
+    <string name="keepalive_battery_hint">앱 정보 페이지에서 "배터리 절약"을 열고 "제한 없음"을 선택하세요.</string>
+    <string name="keepalive_autostart_failed">자동 시작 페이지를 찾을 수 없어 앱 정보를 열었습니다.</string>
+    <string name="keepalive_battery_checking">배터리 정책: 확인 중…</string>
+    <string name="keepalive_battery_ok">배터리 정책: 제한 없음 ✓</string>
+    <string name="keepalive_battery_bad">배터리 정책: 제한 없음이 아님 — 플로팅 창이 업데이트를 멈춥니다</string>
+    <string name="keepalive_autostart_status">자동 시작: 일부 시스템(예: HyperOS)에서는 상태를 읽을 수 없습니다. 활성화되어 있는지 확인하세요</string>
+
+    <string name="history_title">최근 변경</string>
+    <string name="history_empty">아직 기록이 없습니다</string>
+    <string name="clear_history">지우기</string>
+    <string name="copy_activity">복사</string>
+    <string name="toast_copied">클립보드에 복사됨</string>
+
+    <string name="principle">작동 방식: Android에는 다른 앱의 전경 Activity를 직접 읽는 공개 API가 없습니다. 이 앱은 접근성 서비스로 창 상태 변경 이벤트를 수신합니다. 디버그 대상을 선택하면 해당 앱이 전경에 있을 때만 플로팅 창을 표시하고 기록하며, 다른 앱으로 전환하면 즉시 닫힙니다. 플로팅 창은 TYPE_ACCESSIBILITY_OVERLAY를 사용하고 접근성 서비스가 추가하므로 "다른 앱 위에 표시" 권한이 필요 없습니다.</string>
+
+    <string name="accessibility_description">창 변경 이벤트를 읽어 현재 앱의 패키지와 Activity 이름을 플로팅 창에 표시합니다.</string>
+
+    <string name="dialog_accessibility_title">접근성 서비스가 필요합니다</string>
+    <string name="dialog_accessibility_message">시스템 설정의 "접근성"에서 "현재 페이지"를 활성화한 후 이 앱으로 돌아오세요.</string>
+    <string name="dialog_accessibility_positive">설정 열기</string>
+    <string name="dialog_accessibility_negative">취소</string>
+
+    <string name="dialog_reconnect_title">접근성 서비스가 연결되지 않았습니다</string>
+    <string name="dialog_reconnect_message">시스템 설정에는 활성화되어 있지만 서비스가 실제로 연결되지 않았습니다. 보통 시스템이 앱을 회수할 때 발생합니다(MIUI/HyperOS에서 흔함). 접근성 설정에서 "현재 페이지"를 껐다가 다시 켜세요. 자동 시작 허용과 배터리 최적화 해제도 권장합니다.</string>
+
+    <string name="overlay_waiting">창 변경을 기다리는 중…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">펼치기</string>
+    <string name="overlay_collapse">접기</string>
+    <string name="toast_no_ids">이 페이지에 레이아웃 ID가 없습니다</string>
+
+    <string name="tile_subtitle_idle">모니터링 안 함</string>
+    <string name="tile_subtitle_all">모든 앱 모니터링 중</string>
+    <string name="tile_subtitle_target">모니터링 중: %1$s</string>
+    <string name="tile_subtitle_waiting">%1$s 대기 중</string>
+
+    <string name="shortcut_toggle_short">모니터링 전환</string>
+    <string name="shortcut_toggle_long">Activity 모니터링 전환</string>
+</resources>

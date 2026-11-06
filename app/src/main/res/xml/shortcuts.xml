@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_monitor"
+        android:shortcutId="toggle_monitor"
+        android:shortcutLongLabel="@string/shortcut_toggle_long"
+        android:shortcutShortLabel="@string/shortcut_toggle_short">
+        <intent
+            android:action="com.oliver.app.currentpage.ACTION_TOGGLE_MONITOR"
+            android:targetClass="com.oliver.app.currentpage.ui.ToggleShortcutActivity"
+            android:targetPackage="com.oliver.app.currentpage" />
+    </shortcut>
+
+</shortcuts>

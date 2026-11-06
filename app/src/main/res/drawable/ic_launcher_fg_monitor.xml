@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 窗口卡片 -->
+    <path
+        android:fillColor="#1FFFFFFF"
+        android:pathData="M34,30 H74 A8,8 0 0 1 82,38 V68 A8,8 0 0 1 74,76 H34 A8,8 0 0 1 26,68 V38 A8,8 0 0 1 34,30 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M34,30 H74 A8,8 0 0 1 82,38 V68 A8,8 0 0 1 74,76 H34 A8,8 0 0 1 26,68 V38 A8,8 0 0 1 34,30 Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <!-- 标题栏 -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M28,43 H80"
+        android:strokeColor="#80FFFFFF"
+        android:strokeWidth="2" />
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M32,36.5 m-1.5,0 a1.5,1.5 0 1,0 3,0 a1.5,1.5 0 1,0 -3,0" />
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M37,36.5 m-1.5,0 a1.5,1.5 0 1,0 3,0 a1.5,1.5 0 1,0 -3,0" />
+    <!-- Activity 心跳线 -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M34,62 L42,62 L47,52 L54,70 L60,57 L66,62 L74,62"
+        android:strokeColor="#FF4DD9C0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <!-- 实时指示点 -->
+    <path
+        android:fillColor="#FFFF4D8D"
+        android:pathData="M75,29 m-6.5,0 a6.5,6.5 0 1,0 13,0 a6.5,6.5 0 1,0 -13,0" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M75,29 m-2.3,0 a2.3,2.3 0 1,0 4.6,0 a2.3,2.3 0 1,0 -4.6,0" />
+</vector>

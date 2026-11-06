@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">当前页面</string>
+    <string name="app_subtitle">实时查看前台应用与 Activity</string>
+
+    <string name="current_foreground_label">最近捕获</string>
+    <string name="current_none">尚未捕获到信息</string>
+    <string name="current_hint">打开目标应用，这里会显示它的包名与 Activity。</string>
+    <string name="last_seen">最近变化：%1$s</string>
+
+    <string name="monitor_title">悬浮窗监测</string>
+    <string name="monitor_summary">用悬浮窗实时显示当前 Activity</string>
+
+    <string name="show_tag_button_title">显示布局 id 按钮</string>
+    <string name="show_tag_button_summary">在悬浮窗上显示「布局 id 快照」按钮，点击标注当前页面全部视图 id</string>
+
+    <string name="target_title">调试应用</string>
+    <string name="target_summary">仅在该应用位于前台时显示悬浮窗并记录 Activity</string>
+    <string name="target_none">未选择 —— 监测所有应用</string>
+    <string name="target_pick">选择应用</string>
+    <string name="target_clear">清除</string>
+    <string name="target_pick_title">选择调试应用</string>
+    <string name="target_pick_empty">没有可选择的启动器应用</string>
+    <string name="target_search_hint">搜索应用名称或包名</string>
+    <string name="target_search_empty">没有匹配的应用</string>
+    <string name="target_selected_toast">已选择：%1$s，打开它即可开始监测</string>
+
+    <string name="monitor_state_off">监测已关闭</string>
+    <string name="monitor_state_all">正在监测所有应用</string>
+    <string name="monitor_state_target_active">目标应用在前台 · 监测中</string>
+    <string name="monitor_state_waiting_target">等待目标应用进入前台</string>
+    <string name="monitor_state_no_connection">辅助功能未连接，无法监测</string>
+
+    <string name="accessibility_title">辅助功能服务</string>
+    <string name="accessibility_summary">读取窗口变化所必需。如果辅助功能丢失，可尝试允许自启动并关闭电池限制（已在 HyperOS 3 验证可用）。</string>
+    <string name="accessibility_state_connected">已连接</string>
+    <string name="accessibility_state_enabled_not_connected">已启用，但服务未连接</string>
+    <string name="accessibility_state_disabled">未开启</string>
+    <string name="enable_now">去开启</string>
+    <string name="open_settings">打开设置</string>
+    <string name="button_reconnect">去重连</string>
+
+    <string name="keepalive_title">保活设置（辅助功能丢失时）</string>
+    <string name="keepalive_summary">部分系统（包括 MIUI/HyperOS）会在后台限制应用，导致辅助功能事件流中断、悬浮窗时有时无。如果遇到辅助功能丢失，可以尝试允许「自启动」并把省电策略设为「无限制」；本项目已在 HyperOS 3 上验证可用。</string>
+    <string name="keepalive_battery">省电策略</string>
+    <string name="keepalive_autostart">自启动</string>
+    <string name="keepalive_battery_hint">在应用详情页里打开「省电策略」，选择「无限制」。</string>
+    <string name="keepalive_autostart_failed">未找到自启动管理页，已改为打开应用详情。</string>
+    <string name="keepalive_battery_checking">省电策略：检测中…</string>
+    <string name="keepalive_battery_ok">省电策略：已设为无限制 ✓</string>
+    <string name="keepalive_battery_bad">省电策略：未设为无限制，悬浮窗会停止更新</string>
+    <string name="keepalive_autostart_status">自启动：部分系统（如 HyperOS）无法读取状态，请自行确认已开启</string>
+
+    <string name="history_title">最近变化</string>
+    <string name="history_empty">暂无记录</string>
+    <string name="clear_history">清空</string>
+    <string name="copy_activity">复制</string>
+    <string name="toast_copied">已复制到剪贴板</string>
+
+    <string name="principle">原理：Android 没有公开 API 可以直接读取其他应用的前台 Activity。本应用通过辅助功能服务监听窗口状态变化事件。选择调试应用后，只有该应用位于前台时才显示悬浮窗并记录；切到其他应用会立即关闭。悬浮窗使用 TYPE_ACCESSIBILITY_OVERLAY 类型，由辅助功能服务添加，因此不需要“显示在其他应用上层”权限。</string>
+
+    <string name="accessibility_description">监听窗口变化事件，在悬浮窗中显示当前应用的包名与 Activity 名称。</string>
+
+    <string name="dialog_accessibility_title">需要开启辅助功能</string>
+    <string name="dialog_accessibility_message">请在系统“辅助功能”中开启“当前页面”，然后返回本应用。</string>
+    <string name="dialog_accessibility_positive">去设置</string>
+    <string name="dialog_accessibility_negative">取消</string>
+
+    <string name="dialog_reconnect_title">辅助功能未连接</string>
+    <string name="dialog_reconnect_message">系统设置里辅助功能是开启的，但服务并没有真正连接。这通常是系统在后台回收了应用（MIUI/HyperOS 等系统较常见）。请到辅助功能设置中把“当前页面”关闭再重新开启；同时建议允许自启动、关闭电池优化，减少再次发生的概率。</string>
+
+    <string name="overlay_waiting">等待窗口变化…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">展开</string>
+    <string name="overlay_collapse">折叠</string>
+    <string name="toast_no_ids">当前页面没有布局 id</string>
+
+    <string name="tile_subtitle_idle">未监测</string>
+    <string name="tile_subtitle_all">监测所有应用</string>
+    <string name="tile_subtitle_target">监测中：%1$s</string>
+    <string name="tile_subtitle_waiting">等待 %1$s</string>
+
+    <string name="shortcut_toggle_short">开关监测</string>
+    <string name="shortcut_toggle_long">开关 Activity 监测</string>
+</resources>

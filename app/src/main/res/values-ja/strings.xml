@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">現在のページ</string>
+    <string name="app_subtitle">前面アプリと Activity をリアルタイム表示</string>
+
+    <string name="current_foreground_label">最新のキャプチャ</string>
+    <string name="current_none">まだ検出されていません</string>
+    <string name="current_hint">対象アプリを開くと、パッケージ名と Activity がここに表示されます。</string>
+    <string name="last_seen">最終変更：%1$s</string>
+
+    <string name="monitor_title">フローティングモニター</string>
+    <string name="monitor_summary">現在の Activity をフローティングウィンドウに表示</string>
+
+    <string name="show_tag_button_title">レイアウト ID ボタン</string>
+    <string name="show_tag_button_summary">フローティングウィンドウに「レイアウト ID をスナップショット」ボタンを表示します</string>
+
+    <string name="target_title">デバッグ対象</string>
+    <string name="target_summary">このアプリが前面にある間だけフローティングウィンドウを表示して記録します</string>
+    <string name="target_none">未選択 — すべてのアプリを監視</string>
+    <string name="target_pick">アプリを選択</string>
+    <string name="target_clear">クリア</string>
+    <string name="target_pick_title">デバッグ対象を選択</string>
+    <string name="target_pick_empty">起動可能なアプリが見つかりません</string>
+    <string name="target_search_hint">アプリ名またはパッケージ名で検索</string>
+    <string name="target_search_empty">一致するアプリがありません</string>
+    <string name="target_selected_toast">選択済み：%1$s。開くと監視が始まります。</string>
+
+    <string name="monitor_state_off">監視はオフです</string>
+    <string name="monitor_state_all">すべてのアプリを監視中</string>
+    <string name="monitor_state_target_active">対象アプリが前面 · 監視中</string>
+    <string name="monitor_state_waiting_target">対象アプリが前面に来るのを待っています</string>
+    <string name="monitor_state_no_connection">アクセシビリティサービスが未接続です</string>
+
+    <string name="accessibility_title">アクセシビリティサービス</string>
+    <string name="accessibility_summary">ウィンドウ変更の読み取りに必要です。アクセシビリティが失われた場合は、自動起動の許可とバッテリー制限の解除を試してください（HyperOS 3 で確認済み）。</string>
+    <string name="accessibility_state_connected">接続済み</string>
+    <string name="accessibility_state_enabled_not_connected">有効ですが未接続</string>
+    <string name="accessibility_state_disabled">未有効</string>
+    <string name="enable_now">今すぐ有効化</string>
+    <string name="open_settings">設定を開く</string>
+    <string name="button_reconnect">再接続</string>
+
+    <string name="keepalive_title">常駐設定（アクセシビリティが失われた場合）</string>
+    <string name="keepalive_summary">一部のシステム（MIUI/HyperOS を含む）はバックグラウンドアプリを制限し、アクセシビリティイベントが途切れてフローティングウィンドウが表示されたり消えたりします。アクセシビリティが失われた場合は、「自動起動」を許可し、バッテリー設定を「制限なし」にしてください。HyperOS 3 で動作確認済みです。</string>
+    <string name="keepalive_battery">バッテリー設定</string>
+    <string name="keepalive_autostart">自動起動</string>
+    <string name="keepalive_battery_hint">アプリ情報ページで「バッテリー節約」を開き、「制限なし」を選択してください。</string>
+    <string name="keepalive_autostart_failed">自動起動ページが見つからないため、アプリ情報を開きました。</string>
+    <string name="keepalive_battery_checking">バッテリー設定：確認中…</string>
+    <string name="keepalive_battery_ok">バッテリー設定：制限なし ✓</string>
+    <string name="keepalive_battery_bad">バッテリー設定：制限なしになっていません — フローティングウィンドウが更新されなくなります</string>
+    <string name="keepalive_autostart_status">自動起動：一部のシステム（HyperOS など）では状態を読み取れません。有効になっているか確認してください</string>
+
+    <string name="history_title">最近の変更</string>
+    <string name="history_empty">記録はまだありません</string>
+    <string name="clear_history">クリア</string>
+    <string name="copy_activity">コピー</string>
+    <string name="toast_copied">クリップボードにコピーしました</string>
+
+    <string name="principle">仕組み：Android には他のアプリの前面 Activity を直接読み取る公開 API がありません。このアプリはアクセシビリティサービスでウィンドウ状態変更イベントを監視します。デバッグ対象を選択すると、そのアプリが前面にある間だけフローティングウィンドウを表示して記録します。他のアプリに切り替えるとすぐに閉じます。フローティングウィンドウは TYPE_ACCESSIBILITY_OVERLAY を使用し、アクセシビリティサービスが追加するため「他のアプリの上に重ねて表示」権限は不要です。</string>
+
+    <string name="accessibility_description">ウィンドウ変更イベントを監視し、現在のアプリのパッケージ名と Activity 名をフローティングウィンドウに表示します。</string>
+
+    <string name="dialog_accessibility_title">アクセシビリティサービスが必要です</string>
+    <string name="dialog_accessibility_message">システム設定の「アクセシビリティ」で「現在のページ」を有効にしてから、このアプリに戻ってください。</string>
+    <string name="dialog_accessibility_positive">設定を開く</string>
+    <string name="dialog_accessibility_negative">キャンセル</string>
+
+    <string name="dialog_reconnect_title">アクセシビリティサービスが未接続です</string>
+    <string name="dialog_reconnect_message">システム設定では有効になっていますが、サービスが実際には接続されていません。通常はシステムがアプリを回収したことが原因です（MIUI/HyperOS などでよく発生）。アクセシビリティ設定で「現在のページ」をオフにしてから再度オンにしてください。自動起動の許可とバッテリー最適化の解除も推奨します。</string>
+
+    <string name="overlay_waiting">ウィンドウの変更を待っています…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">展開</string>
+    <string name="overlay_collapse">折りたたむ</string>
+    <string name="toast_no_ids">このページにレイアウト ID がありません</string>
+
+    <string name="tile_subtitle_idle">監視していません</string>
+    <string name="tile_subtitle_all">すべてのアプリを監視中</string>
+    <string name="tile_subtitle_target">監視中：%1$s</string>
+    <string name="tile_subtitle_waiting">%1$s を待っています</string>
+
+    <string name="shortcut_toggle_short">監視の切り替え</string>
+    <string name="shortcut_toggle_long">Activity 監視の切り替え</string>
+</resources>

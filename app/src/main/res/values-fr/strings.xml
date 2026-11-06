@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Page actuelle</string>
+    <string name="app_subtitle">Inspecteur en direct de l’app et de l’Activity au premier plan</string>
+
+    <string name="current_foreground_label">DERNIÈRE CAPTURE</string>
+    <string name="current_none">Rien détecté pour l’instant</string>
+    <string name="current_hint">Ouvrez l’app cible ; son package et son Activity apparaîtront ici.</string>
+    <string name="last_seen">Dernier changement : %1$s</string>
+
+    <string name="monitor_title">Moniteur flottant</string>
+    <string name="monitor_summary">Affiche l’Activity actuelle dans une fenêtre flottante</string>
+
+    <string name="show_tag_button_title">Bouton id de mise en page</string>
+    <string name="show_tag_button_summary">Affiche le bouton « capturer les ids de mise en page » sur la fenêtre flottante</string>
+
+    <string name="target_title">App de débogage</string>
+    <string name="target_summary">Affiche la fenêtre flottante et enregistre uniquement lorsque cette app est au premier plan</string>
+    <string name="target_none">Non sélectionnée — surveillance de toutes les apps</string>
+    <string name="target_pick">Choisir une app</string>
+    <string name="target_clear">Effacer</string>
+    <string name="target_pick_title">Choisir une app de débogage</string>
+    <string name="target_pick_empty">Aucune app lançable trouvée</string>
+    <string name="target_search_hint">Rechercher un nom d’app ou un package</string>
+    <string name="target_search_empty">Aucune app correspondante</string>
+    <string name="target_selected_toast">Sélectionnée : %1$s. Ouvrez-la pour commencer la surveillance.</string>
+
+    <string name="monitor_state_off">La surveillance est désactivée</string>
+    <string name="monitor_state_all">Surveillance de toutes les apps</string>
+    <string name="monitor_state_target_active">App cible au premier plan · surveillance</string>
+    <string name="monitor_state_waiting_target">En attente du passage de l’app cible au premier plan</string>
+    <string name="monitor_state_no_connection">Le service d’accessibilité n’est pas connecté</string>
+
+    <string name="accessibility_title">Service d’accessibilité</string>
+    <string name="accessibility_summary">Nécessaire pour lire les changements de fenêtre. Si l’accessibilité se perd, essayez d’autoriser le démarrage automatique et de retirer les restrictions de batterie (testé sur HyperOS 3).</string>
+    <string name="accessibility_state_connected">Connecté</string>
+    <string name="accessibility_state_enabled_not_connected">Activé mais non connecté</string>
+    <string name="accessibility_state_disabled">Non activé</string>
+    <string name="enable_now">Activer maintenant</string>
+    <string name="open_settings">Ouvrir les réglages</string>
+    <string name="button_reconnect">Reconnecter</string>
+
+    <string name="keepalive_title">Maintien en vie (si l’accessibilité se perd)</string>
+    <string name="keepalive_summary">Certains systèmes (dont MIUI/HyperOS) restreignent les apps en arrière-plan, ce qui peut couper le flux d’événements d’accessibilité et faire apparaître/disparaître la fenêtre flottante. Si l’accessibilité se perd, essayez d’autoriser le « Démarrage automatique » et de régler la politique de batterie sur « Sans restriction ». Testé sur HyperOS 3.</string>
+    <string name="keepalive_battery">Politique de batterie</string>
+    <string name="keepalive_autostart">Démarrage automatique</string>
+    <string name="keepalive_battery_hint">Dans la page d’informations de l’app, ouvrez « Économiseur de batterie » et choisissez « Sans restriction ».</string>
+    <string name="keepalive_autostart_failed">Page de démarrage automatique introuvable ; ouverture des informations de l’app.</string>
+    <string name="keepalive_battery_checking">Politique de batterie : vérification…</string>
+    <string name="keepalive_battery_ok">Politique de batterie : sans restriction ✓</string>
+    <string name="keepalive_battery_bad">Politique de batterie : PAS sans restriction — la fenêtre flottante cessera de se mettre à jour</string>
+    <string name="keepalive_autostart_status">Démarrage automatique : certains systèmes (ex. HyperOS) n’exposent pas son état ; vérifiez qu’il est activé</string>
+
+    <string name="history_title">Changements récents</string>
+    <string name="history_empty">Aucun enregistrement</string>
+    <string name="clear_history">Effacer</string>
+    <string name="copy_activity">Copier</string>
+    <string name="toast_copied">Copié dans le presse-papiers</string>
+
+    <string name="principle">Fonctionnement : Android n’a pas d’API publique pour lire l’Activity au premier plan d’une autre app. Cette app écoute les événements de changement de fenêtre via un AccessibilityService. Avec une app de débogage sélectionnée, elle n’affiche la fenêtre flottante et n’enregistre que lorsque cette app est au premier plan ; elle se ferme immédiatement en cas de changement d’app. La fenêtre flottante utilise TYPE_ACCESSIBILITY_OVERLAY et est ajoutée par le service d’accessibilité ; elle ne nécessite donc pas l’autorisation « afficher par-dessus les autres apps ».</string>
+
+    <string name="accessibility_description">Lit les événements de changement de fenêtre pour afficher le package et le nom de l’Activity actuelle dans une fenêtre flottante.</string>
+
+    <string name="dialog_accessibility_title">Service d’accessibilité requis</string>
+    <string name="dialog_accessibility_message">Activez « Page actuelle » dans les réglages d’Accessibilité, puis revenez dans cette app.</string>
+    <string name="dialog_accessibility_positive">Ouvrir les réglages</string>
+    <string name="dialog_accessibility_negative">Annuler</string>
+
+    <string name="dialog_reconnect_title">Le service d’accessibilité n’est pas connecté</string>
+    <string name="dialog_reconnect_message">Le système indique que le service est activé, mais il n’est pas réellement connecté. Cela arrive souvent lorsque le système recycle l’app (fréquent sous MIUI/HyperOS). Désactivez puis réactivez « Page actuelle » dans Accessibilité. Autorisez aussi le démarrage automatique et retirez les restrictions de batterie pour réduire ce risque.</string>
+
+    <string name="overlay_waiting">En attente d’un changement de fenêtre…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">Développer</string>
+    <string name="overlay_collapse">Réduire</string>
+    <string name="toast_no_ids">Aucun id de mise en page trouvé sur cette page</string>
+
+    <string name="tile_subtitle_idle">Surveillance inactive</string>
+    <string name="tile_subtitle_all">Surveillance de toutes les apps</string>
+    <string name="tile_subtitle_target">Surveillance : %1$s</string>
+    <string name="tile_subtitle_waiting">En attente de %1$s</string>
+
+    <string name="shortcut_toggle_short">Basculer le moniteur</string>
+    <string name="shortcut_toggle_long">Basculer le moniteur d’Activity</string>
+</resources>

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Pagina corrente</string>
+    <string name="app_subtitle">Ispettore live dell’app e dell’Activity in primo piano</string>
+
+    <string name="current_foreground_label">ULTIMA CATTURA</string>
+    <string name="current_none">Niente rilevato per ora</string>
+    <string name="current_hint">Apri l’app di destinazione; pacchetto e Activity appariranno qui.</string>
+    <string name="last_seen">Ultima modifica: %1$s</string>
+
+    <string name="monitor_title">Monitor flottante</string>
+    <string name="monitor_summary">Mostra l’Activity corrente in una finestra flottante</string>
+
+    <string name="show_tag_button_title">Pulsante id di layout</string>
+    <string name="show_tag_button_summary">Mostra il pulsante «cattura id di layout» nella finestra flottante</string>
+
+    <string name="target_title">App di debug</string>
+    <string name="target_summary">Mostra la finestra flottante e registra solo mentre questa app è in primo piano</string>
+    <string name="target_none">Non selezionata — monitoraggio di tutte le app</string>
+    <string name="target_pick">Scegli app</string>
+    <string name="target_clear">Cancella</string>
+    <string name="target_pick_title">Scegli un’app di debug</string>
+    <string name="target_pick_empty">Nessuna app avviabile trovata</string>
+    <string name="target_search_hint">Cerca nome app o pacchetto</string>
+    <string name="target_search_empty">Nessuna app corrispondente</string>
+    <string name="target_selected_toast">Selezionata: %1$s. Aprila per iniziare il monitoraggio.</string>
+
+    <string name="monitor_state_off">Il monitoraggio è disattivato</string>
+    <string name="monitor_state_all">Monitoraggio di tutte le app</string>
+    <string name="monitor_state_target_active">App di destinazione in primo piano · monitoraggio</string>
+    <string name="monitor_state_waiting_target">In attesa che l’app di destinazione passi in primo piano</string>
+    <string name="monitor_state_no_connection">Il servizio di accessibilità non è connesso</string>
+
+    <string name="accessibility_title">Servizio di accessibilità</string>
+    <string name="accessibility_summary">Necessario per leggere i cambi di finestra. Se l’accessibilità si perde, prova a consentire l’avvio automatico e a rimuovere le restrizioni della batteria (testato su HyperOS 3).</string>
+    <string name="accessibility_state_connected">Connesso</string>
+    <string name="accessibility_state_enabled_not_connected">Attivato ma non connesso</string>
+    <string name="accessibility_state_disabled">Non attivato</string>
+    <string name="enable_now">Attiva ora</string>
+    <string name="open_settings">Apri impostazioni</string>
+    <string name="button_reconnect">Riconnetti</string>
+
+    <string name="keepalive_title">Mantieni attivo (se l’accessibilità si perde)</string>
+    <string name="keepalive_summary">Alcuni sistemi (tra cui MIUI/HyperOS) limitano le app in background, il che può interrompere il flusso di eventi di accessibilità e far apparire/scomparire la finestra flottante. Se l’accessibilità si perde, prova a consentire «Avvio automatico» e a impostare la politica della batteria su «Nessuna restrizione». Testato su HyperOS 3.</string>
+    <string name="keepalive_battery">Politica della batteria</string>
+    <string name="keepalive_autostart">Avvio automatico</string>
+    <string name="keepalive_battery_hint">Nella pagina info dell’app, apri «Risparmio batteria» e scegli «Nessuna restrizione».</string>
+    <string name="keepalive_autostart_failed">Pagina di avvio automatico non trovata; aperte le info dell’app.</string>
+    <string name="keepalive_battery_checking">Politica della batteria: verifica…</string>
+    <string name="keepalive_battery_ok">Politica della batteria: nessuna restrizione ✓</string>
+    <string name="keepalive_battery_bad">Politica della batteria: NON senza restrizioni — la finestra flottante smetterà di aggiornarsi</string>
+    <string name="keepalive_autostart_status">Avvio automatico: alcuni sistemi (es. HyperOS) non ne espongono lo stato; verifica che sia attivo</string>
+
+    <string name="history_title">Modifiche recenti</string>
+    <string name="history_empty">Nessun record</string>
+    <string name="clear_history">Cancella</string>
+    <string name="copy_activity">Copia</string>
+    <string name="toast_copied">Copiato negli appunti</string>
+
+    <string name="principle">Come funziona: Android non ha un’API pubblica per leggere l’Activity in primo piano di un’altra app. Questa app ascolta gli eventi di cambio finestra tramite un AccessibilityService. Con un’app di debug selezionata, mostra la finestra flottante e registra solo mentre quell’app è in primo piano; passando a un’altra app si chiude subito. La finestra flottante usa TYPE_ACCESSIBILITY_OVERLAY ed è aggiunta dal servizio di accessibilità, quindi non richiede il permesso «visualizza sopra altre app».</string>
+
+    <string name="accessibility_description">Legge gli eventi di cambio finestra per mostrare pacchetto e nome dell’Activity corrente in una finestra flottante.</string>
+
+    <string name="dialog_accessibility_title">Serve il servizio di accessibilità</string>
+    <string name="dialog_accessibility_message">Attiva «Pagina corrente» nelle impostazioni di Accessibilità, poi torna a questa app.</string>
+    <string name="dialog_accessibility_positive">Apri impostazioni</string>
+    <string name="dialog_accessibility_negative">Annulla</string>
+
+    <string name="dialog_reconnect_title">Il servizio di accessibilità non è connesso</string>
+    <string name="dialog_reconnect_message">Il sistema dice che il servizio è attivo, ma non è realmente connesso. Succede spesso quando il sistema ricicla l’app (comune su MIUI/HyperOS). Disattiva e riattiva «Pagina corrente» in Accessibilità. Consenti anche l’avvio automatico e rimuovi le restrizioni della batteria per ridurre il rischio.</string>
+
+    <string name="overlay_waiting">In attesa di un cambio finestra…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">Espandi</string>
+    <string name="overlay_collapse">Comprimi</string>
+    <string name="toast_no_ids">Nessun id di layout trovato in questa pagina</string>
+
+    <string name="tile_subtitle_idle">Non monitorato</string>
+    <string name="tile_subtitle_all">Monitoraggio di tutte le app</string>
+    <string name="tile_subtitle_target">Monitoraggio: %1$s</string>
+    <string name="tile_subtitle_waiting">In attesa di %1$s</string>
+
+    <string name="shortcut_toggle_short">Attiva/disattiva monitor</string>
+    <string name="shortcut_toggle_long">Attiva/disattiva monitor Activity</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 卡片右缘的按钮组（竖排）：上 = id 快照（ID 文本），下 = 折叠/展开 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <!-- id 快照按钮：开关关闭时 GONE，容器自动回流 -->
+    <TextView
+        android:id="@+id/overlay_tagbtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_overlay_arrow"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:importantForAccessibility="no"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.04"
+        android:text="@string/overlay_tag_button"
+        android:textColor="@color/overlay_text_primary"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- 折叠/展开按钮：收起时图标整体旋转 180° -->
+    <ImageView
+        android:id="@+id/overlay_arrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_overlay_arrow"
+        android:importantForAccessibility="no"
+        android:padding="6dp"
+        android:src="@drawable/ic_overlay_dock" />
+</LinearLayout>

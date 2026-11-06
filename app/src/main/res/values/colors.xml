@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#FF3D5AFE</color>
+    <color name="brand_on_primary">#FFFFFFFF</color>
+    <color name="brand_primary_container">#FFDDE1FF</color>
+    <color name="brand_on_primary_container">#FF001453</color>
+    <color name="brand_secondary">#FF00BFA5</color>
+
+    <color name="divider">#1F000000</color>
+    <color name="overlay_background">#B31F1F26</color>
+    <color name="overlay_text_primary">#FFFFFFFF</color>
+    <color name="overlay_text_secondary">#B3FFFFFF</color>
+    <color name="overlay_stroke">#2EFFFFFF</color>
+</resources>

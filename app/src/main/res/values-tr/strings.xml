@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Geçerli Sayfa</string>
+    <string name="app_subtitle">Ön plandaki uygulama ve Activity için canlı denetleyici</string>
+
+    <string name="current_foreground_label">SON YAKALAMA</string>
+    <string name="current_none">Henüz bir şey algılanmadı</string>
+    <string name="current_hint">Hedef uygulamayı açın; paket ve Activity burada görünecek.</string>
+    <string name="last_seen">Son değişiklik: %1$s</string>
+
+    <string name="monitor_title">Yüzen monitör</string>
+    <string name="monitor_summary">Geçerli Activity’yi yüzen bir pencerede gösterir</string>
+
+    <string name="show_tag_button_title">Düzen id düğmesi</string>
+    <string name="show_tag_button_summary">Yüzen pencerede "düzen id’lerini yakala" düğmesini gösterir</string>
+
+    <string name="target_title">Hata ayıklama hedefi</string>
+    <string name="target_summary">Yalnızca bu uygulama ön plandayken yüzen pencereyi gösterir ve kaydeder</string>
+    <string name="target_none">Seçilmedi — tüm uygulamalar izleniyor</string>
+    <string name="target_pick">Uygulama seç</string>
+    <string name="target_clear">Temizle</string>
+    <string name="target_pick_title">Hata ayıklama hedefi seç</string>
+    <string name="target_pick_empty">Başlatılabilir uygulama bulunamadı</string>
+    <string name="target_search_hint">Uygulama adı veya paket ara</string>
+    <string name="target_search_empty">Eşleşen uygulama yok</string>
+    <string name="target_selected_toast">Seçildi: %1$s. İzlemeyi başlatmak için açın.</string>
+
+    <string name="monitor_state_off">İzleme kapalı</string>
+    <string name="monitor_state_all">Tüm uygulamalar izleniyor</string>
+    <string name="monitor_state_target_active">Hedef uygulama ön planda · izleniyor</string>
+    <string name="monitor_state_waiting_target">Hedef uygulamanın ön plana gelmesi bekleniyor</string>
+    <string name="monitor_state_no_connection">Erişilebilirlik hizmeti bağlı değil</string>
+
+    <string name="accessibility_title">Erişilebilirlik hizmeti</string>
+    <string name="accessibility_summary">Pencere değişikliklerini okumak için gerekli. Erişilebilirlik kaybolursa otomatik başlatmaya izin vermeyi ve pil kısıtlamalarını kaldırmayı deneyin (HyperOS 3’te test edildi).</string>
+    <string name="accessibility_state_connected">Bağlı</string>
+    <string name="accessibility_state_enabled_not_connected">Etkin ancak bağlı değil</string>
+    <string name="accessibility_state_disabled">Etkin değil</string>
+    <string name="enable_now">Şimdi etkinleştir</string>
+    <string name="open_settings">Ayarları aç</string>
+    <string name="button_reconnect">Yeniden bağlan</string>
+
+    <string name="keepalive_title">Çalışır tut (erişilebilirlik kaybolursa)</string>
+    <string name="keepalive_summary">Bazı sistemler (MIUI/HyperOS dahil) arka plan uygulamalarını kısıtlar; bu, erişilebilirlik olay akışını kesebilir ve yüzen pencereyi açılıp kapanır hale getirebilir. Erişilebilirlik kaybolursa "Otomatik başlatma"ya izin vermeyi ve pil ilkesini "Kısıtlama yok" olarak ayarlamayı deneyin. HyperOS 3’te test edildi.</string>
+    <string name="keepalive_battery">Pil ilkesi</string>
+    <string name="keepalive_autostart">Otomatik başlatma</string>
+    <string name="keepalive_battery_hint">Uygulama bilgileri sayfasında "Pil tasarrufu"nu açın ve "Kısıtlama yok"u seçin.</string>
+    <string name="keepalive_autostart_failed">Otomatik başlatma sayfası bulunamadı; uygulama bilgileri açıldı.</string>
+    <string name="keepalive_battery_checking">Pil ilkesi: denetleniyor…</string>
+    <string name="keepalive_battery_ok">Pil ilkesi: kısıtlama yok ✓</string>
+    <string name="keepalive_battery_bad">Pil ilkesi: kısıtlama yok DEĞİL — yüzen pencere güncellenmeyi durduracak</string>
+    <string name="keepalive_autostart_status">Otomatik başlatma: bazı sistemler (ör. HyperOS) durumu göstermez; etkin olduğunu doğrulayın</string>
+
+    <string name="history_title">Son değişiklikler</string>
+    <string name="history_empty">Henüz kayıt yok</string>
+    <string name="clear_history">Temizle</string>
+    <string name="copy_activity">Kopyala</string>
+    <string name="toast_copied">Panoya kopyalandı</string>
+
+    <string name="principle">Nasıl çalışır: Android’de başka bir uygulamanın ön plandaki Activity’sini okumak için genel API yoktur. Bu uygulama bir AccessibilityService aracılığıyla pencere değişikliği olaylarını dinler. Bir hata ayıklama hedefi seçildiğinde, yalnızca o uygulama ön plandayken yüzen pencereyi gösterir ve kaydeder; başka bir uygulamaya geçildiğinde hemen kapanır. Yüzen pencere TYPE_ACCESSIBILITY_OVERLAY kullanır ve erişilebilirlik hizmeti tarafından eklenir; bu nedenle "diğer uygulamaların üzerinde göster" izni gerekmez.</string>
+
+    <string name="accessibility_description">Geçerli uygulamanın paketini ve Activity adını yüzen bir pencerede göstermek için pencere değişikliği olaylarını okur.</string>
+
+    <string name="dialog_accessibility_title">Erişilebilirlik hizmeti gerekli</string>
+    <string name="dialog_accessibility_message">Erişilebilirlik ayarlarında "Geçerli Sayfa"yı etkinleştirin ve bu uygulamaya dönün.</string>
+    <string name="dialog_accessibility_positive">Ayarları aç</string>
+    <string name="dialog_accessibility_negative">İptal</string>
+
+    <string name="dialog_reconnect_title">Erişilebilirlik hizmeti bağlı değil</string>
+    <string name="dialog_reconnect_message">Sistem hizmetin etkin olduğunu söylüyor ancak gerçekte bağlı değil. Bu genellikle sistem uygulamayı geri dönüştürdüğünde olur (MIUI/HyperOS’ta yaygın). Erişilebilirlik ayarlarında "Geçerli Sayfa"yı kapatıp yeniden açın. Otomatik başlatmaya izin vermek ve pil kısıtlamalarını kaldırmak da önerilir.</string>
+
+    <string name="overlay_waiting">Pencere değişikliği bekleniyor…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">Genişlet</string>
+    <string name="overlay_collapse">Daralt</string>
+    <string name="toast_no_ids">Bu sayfada düzen id’si bulunamadı</string>
+
+    <string name="tile_subtitle_idle">İzleme yok</string>
+    <string name="tile_subtitle_all">Tüm uygulamalar izleniyor</string>
+    <string name="tile_subtitle_target">İzleniyor: %1$s</string>
+    <string name="tile_subtitle_waiting">%1$s bekleniyor</string>
+
+    <string name="shortcut_toggle_short">Monitörü aç/kapat</string>
+    <string name="shortcut_toggle_long">Activity monitörünü aç/kapat</string>
+</resources>

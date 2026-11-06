@@ -1,0 +1,24 @@
+*.iml
+.gradle
+/local.properties
+local.properties
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+.DS_Store
+
+# IDE / tooling state
+/.idea/
+/.kotlin/
+/.agentbridge/
+**/build/
+*.hprof
+
+# Local artifacts
+*.apk
+*.aab
+*.jks
+*.keystore
+/keystore/

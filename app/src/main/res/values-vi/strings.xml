@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Trang hiện tại</string>
+    <string name="app_subtitle">Trình kiểm tra ứng dụng và Activity ở tiền cảnh theo thời gian thực</string>
+
+    <string name="current_foreground_label">LẦN CHỤP GẦN NHẤT</string>
+    <string name="current_none">Chưa phát hiện gì</string>
+    <string name="current_hint">Mở ứng dụng đích; gói và Activity sẽ xuất hiện ở đây.</string>
+    <string name="last_seen">Thay đổi gần nhất: %1$s</string>
+
+    <string name="monitor_title">Cửa sổ giám sát</string>
+    <string name="monitor_summary">Hiển thị Activity hiện tại trong cửa sổ nổi</string>
+
+    <string name="show_tag_button_title">Nút id bố cục</string>
+    <string name="show_tag_button_summary">Hiển thị nút "chụp id bố cục" trên cửa sổ nổi</string>
+
+    <string name="target_title">Ứng dụng gỡ lỗi</string>
+    <string name="target_summary">Chỉ hiển thị cửa sổ nổi và ghi lại khi ứng dụng này ở tiền cảnh</string>
+    <string name="target_none">Chưa chọn — giám sát tất cả ứng dụng</string>
+    <string name="target_pick">Chọn ứng dụng</string>
+    <string name="target_clear">Xóa</string>
+    <string name="target_pick_title">Chọn ứng dụng gỡ lỗi</string>
+    <string name="target_pick_empty">Không tìm thấy ứng dụng khởi chạy được</string>
+    <string name="target_search_hint">Tìm tên ứng dụng hoặc gói</string>
+    <string name="target_search_empty">Không có ứng dụng phù hợp</string>
+    <string name="target_selected_toast">Đã chọn: %1$s. Mở ứng dụng để bắt đầu giám sát.</string>
+
+    <string name="monitor_state_off">Đang tắt giám sát</string>
+    <string name="monitor_state_all">Đang giám sát tất cả ứng dụng</string>
+    <string name="monitor_state_target_active">Ứng dụng đích ở tiền cảnh · đang giám sát</string>
+    <string name="monitor_state_waiting_target">Đang chờ ứng dụng đích lên tiền cảnh</string>
+    <string name="monitor_state_no_connection">Dịch vụ trợ năng chưa kết nối</string>
+
+    <string name="accessibility_title">Dịch vụ trợ năng</string>
+    <string name="accessibility_summary">Cần thiết để đọc thay đổi cửa sổ. Nếu mất trợ năng, hãy thử cho phép tự khởi động và bỏ giới hạn pin (đã thử trên HyperOS 3).</string>
+    <string name="accessibility_state_connected">Đã kết nối</string>
+    <string name="accessibility_state_enabled_not_connected">Đã bật nhưng chưa kết nối</string>
+    <string name="accessibility_state_disabled">Chưa bật</string>
+    <string name="enable_now">Bật ngay</string>
+    <string name="open_settings">Mở cài đặt</string>
+    <string name="button_reconnect">Kết nối lại</string>
+
+    <string name="keepalive_title">Giữ hoạt động (khi mất trợ năng)</string>
+    <string name="keepalive_summary">Một số hệ thống (gồm MIUI/HyperOS) giới hạn ứng dụng chạy nền, có thể ngắt luồng sự kiện trợ năng và làm cửa sổ nổi lúc có lúc không. Nếu mất trợ năng, hãy thử cho phép "Tự khởi động" và đặt chính sách pin thành "Không giới hạn". Đã thử trên HyperOS 3.</string>
+    <string name="keepalive_battery">Chính sách pin</string>
+    <string name="keepalive_autostart">Tự khởi động</string>
+    <string name="keepalive_battery_hint">Trong trang thông tin ứng dụng, mở "Tiết kiệm pin" và chọn "Không giới hạn".</string>
+    <string name="keepalive_autostart_failed">Không tìm thấy trang tự khởi động; đã mở thông tin ứng dụng.</string>
+    <string name="keepalive_battery_checking">Chính sách pin: đang kiểm tra…</string>
+    <string name="keepalive_battery_ok">Chính sách pin: không giới hạn ✓</string>
+    <string name="keepalive_battery_bad">Chính sách pin: CHƯA phải không giới hạn — cửa sổ nổi sẽ ngừng cập nhật</string>
+    <string name="keepalive_autostart_status">Tự khởi động: một số hệ thống (vd. HyperOS) không hiển thị trạng thái; vui lòng xác nhận đã bật</string>
+
+    <string name="history_title">Thay đổi gần đây</string>
+    <string name="history_empty">Chưa có bản ghi</string>
+    <string name="clear_history">Xóa</string>
+    <string name="copy_activity">Sao chép</string>
+    <string name="toast_copied">Đã sao chép vào clipboard</string>
+
+    <string name="principle">Cách hoạt động: Android không có API công khai để đọc Activity tiền cảnh của ứng dụng khác. Ứng dụng này lắng nghe sự kiện thay đổi cửa sổ qua AccessibilityService. Khi chọn ứng dụng gỡ lỗi, nó chỉ hiển thị cửa sổ nổi và ghi lại khi ứng dụng đó ở tiền cảnh; chuyển sang ứng dụng khác sẽ đóng ngay. Cửa sổ nổi dùng TYPE_ACCESSIBILITY_OVERLAY và được dịch vụ trợ năng thêm vào, nên không cần quyền "hiển thị trên ứng dụng khác".</string>
+
+    <string name="accessibility_description">Đọc sự kiện thay đổi cửa sổ để hiển thị gói và tên Activity hiện tại trong cửa sổ nổi.</string>
+
+    <string name="dialog_accessibility_title">Cần dịch vụ trợ năng</string>
+    <string name="dialog_accessibility_message">Bật "Trang hiện tại" trong cài đặt Trợ năng, sau đó quay lại ứng dụng này.</string>
+    <string name="dialog_accessibility_positive">Mở cài đặt</string>
+    <string name="dialog_accessibility_negative">Hủy</string>
+
+    <string name="dialog_reconnect_title">Dịch vụ trợ năng chưa kết nối</string>
+    <string name="dialog_reconnect_message">Hệ thống báo dịch vụ đã bật nhưng thực tế chưa kết nối. Điều này thường xảy ra khi hệ thống thu hồi ứng dụng (phổ biến trên MIUI/HyperOS). Tắt rồi bật lại "Trang hiện tại" trong Trợ năng. Cũng nên cho phép tự khởi động và bỏ giới hạn pin để giảm khả năng tái diễn.</string>
+
+    <string name="overlay_waiting">Đang chờ thay đổi cửa sổ…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">Mở rộng</string>
+    <string name="overlay_collapse">Thu gọn</string>
+    <string name="toast_no_ids">Không tìm thấy id bố cục trên trang này</string>
+
+    <string name="tile_subtitle_idle">Không giám sát</string>
+    <string name="tile_subtitle_all">Đang giám sát tất cả ứng dụng</string>
+    <string name="tile_subtitle_target">Đang giám sát: %1$s</string>
+    <string name="tile_subtitle_waiting">Đang chờ %1$s</string>
+
+    <string name="shortcut_toggle_short">Bật/tắt giám sát</string>
+    <string name="shortcut_toggle_long">Bật/tắt giám sát Activity</string>
+</resources>

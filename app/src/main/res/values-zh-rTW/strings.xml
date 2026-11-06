@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">目前頁面</string>
+    <string name="app_subtitle">即時檢視前景應用程式與 Activity</string>
+
+    <string name="current_foreground_label">最近擷取</string>
+    <string name="current_none">尚未偵測到內容</string>
+    <string name="current_hint">開啟目標應用程式，這裡會顯示它的套件名稱與 Activity。</string>
+    <string name="last_seen">最近變更：%1$s</string>
+
+    <string name="monitor_title">懸浮視窗監測</string>
+    <string name="monitor_summary">用懸浮視窗即時顯示目前 Activity</string>
+
+    <string name="show_tag_button_title">顯示版面配置 id 按鈕</string>
+    <string name="show_tag_button_summary">在懸浮視窗上顯示「版面配置 id 快照」按鈕，點擊可標註目前頁面所有檢視 id</string>
+
+    <string name="target_title">偵錯應用程式</string>
+    <string name="target_summary">僅在此應用程式位於前景時顯示懸浮視窗並記錄 Activity</string>
+    <string name="target_none">未選擇 —— 監測所有應用程式</string>
+    <string name="target_pick">選擇應用程式</string>
+    <string name="target_clear">清除</string>
+    <string name="target_pick_title">選擇偵錯應用程式</string>
+    <string name="target_pick_empty">找不到可啟動的應用程式</string>
+    <string name="target_search_hint">搜尋應用程式名稱或套件名稱</string>
+    <string name="target_search_empty">沒有符合的應用程式</string>
+    <string name="target_selected_toast">已選擇：%1$s，開啟它即可開始監測</string>
+
+    <string name="monitor_state_off">監測已關閉</string>
+    <string name="monitor_state_all">正在監測所有應用程式</string>
+    <string name="monitor_state_target_active">目標應用程式在前景 · 監測中</string>
+    <string name="monitor_state_waiting_target">等待目標應用程式進入前景</string>
+    <string name="monitor_state_no_connection">無障礙服務未連線，無法監測</string>
+
+    <string name="accessibility_title">無障礙服務</string>
+    <string name="accessibility_summary">讀取視窗變更所必需。如果無障礙功能遺失，可嘗試允許自啟動並關閉電池限制（已在 HyperOS 3 驗證可用）。</string>
+    <string name="accessibility_state_connected">已連線</string>
+    <string name="accessibility_state_enabled_not_connected">已啟用，但服務未連線</string>
+    <string name="accessibility_state_disabled">未開啟</string>
+    <string name="enable_now">去開啟</string>
+    <string name="open_settings">開啟設定</string>
+    <string name="button_reconnect">去重新連線</string>
+
+    <string name="keepalive_title">保持運作設定（無障礙功能遺失時）</string>
+    <string name="keepalive_summary">部分系統（包括 MIUI/HyperOS）會在背景限制應用程式，導致無障礙事件流中斷、懸浮視窗時有時無。如果遇到無障礙功能遺失，可以嘗試允許「自啟動」並將省電策略設為「無限制」；本專案已在 HyperOS 3 上驗證可用。</string>
+    <string name="keepalive_battery">省電策略</string>
+    <string name="keepalive_autostart">自啟動</string>
+    <string name="keepalive_battery_hint">在應用程式詳細資料頁開啟「省電策略」，選擇「無限制」。</string>
+    <string name="keepalive_autostart_failed">找不到自啟動管理頁，已改為開啟應用程式詳細資料。</string>
+    <string name="keepalive_battery_checking">省電策略：偵測中…</string>
+    <string name="keepalive_battery_ok">省電策略：已設為無限制 ✓</string>
+    <string name="keepalive_battery_bad">省電策略：未設為無限制，懸浮視窗會停止更新</string>
+    <string name="keepalive_autostart_status">自啟動：部分系統（如 HyperOS）無法讀取狀態，請自行確認已開啟</string>
+
+    <string name="history_title">最近變更</string>
+    <string name="history_empty">尚無記錄</string>
+    <string name="clear_history">清空</string>
+    <string name="copy_activity">複製</string>
+    <string name="toast_copied">已複製到剪貼簿</string>
+
+    <string name="principle">原理：Android 沒有公開 API 可直接讀取其他應用程式的前景 Activity。本應用程式透過無障礙服務監聽視窗狀態變更事件。選擇偵錯應用程式後，只有該應用程式位於前景時才顯示懸浮視窗並記錄；切換到其他應用程式會立即關閉。懸浮視窗使用 TYPE_ACCESSIBILITY_OVERLAY 類型，由無障礙服務加入，因此不需要「顯示在其他應用程式上層」權限。</string>
+
+    <string name="accessibility_description">監聽視窗變更事件，在懸浮視窗中顯示目前應用程式的套件名稱與 Activity 名稱。</string>
+
+    <string name="dialog_accessibility_title">需要開啟無障礙服務</string>
+    <string name="dialog_accessibility_message">請在系統「無障礙」設定中開啟「目前頁面」，然後返回本應用程式。</string>
+    <string name="dialog_accessibility_positive">去設定</string>
+    <string name="dialog_accessibility_negative">取消</string>
+
+    <string name="dialog_reconnect_title">無障礙服務未連線</string>
+    <string name="dialog_reconnect_message">系統設定裡無障礙服務是開啟的，但服務並沒有真正連線。這通常是系統在背景回收了應用程式（MIUI/HyperOS 等系統較常見）。請到無障礙設定中把「目前頁面」關閉再重新開啟；同時建議允許自啟動、關閉電池最佳化，減少再次發生的機率。</string>
+
+    <string name="overlay_waiting">等待視窗變更…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">展開</string>
+    <string name="overlay_collapse">收合</string>
+    <string name="toast_no_ids">目前頁面沒有版面配置 id</string>
+
+    <string name="tile_subtitle_idle">未監測</string>
+    <string name="tile_subtitle_all">監測所有應用程式</string>
+    <string name="tile_subtitle_target">監測中：%1$s</string>
+    <string name="tile_subtitle_waiting">等待 %1$s</string>
+
+    <string name="shortcut_toggle_short">開關監測</string>
+    <string name="shortcut_toggle_long">開關 Activity 監測</string>
+</resources>

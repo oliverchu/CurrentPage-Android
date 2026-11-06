@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Current Page</string>
+    <string name="app_subtitle">Live foreground app &amp; Activity inspector</string>
+
+    <string name="current_foreground_label">LATEST CAPTURE</string>
+    <string name="current_none">Nothing detected yet</string>
+    <string name="current_hint">Open the target app; its package and Activity will appear here.</string>
+    <string name="last_seen">Last change: %1$s</string>
+
+    <string name="monitor_title">Floating monitor</string>
+    <string name="monitor_summary">Show the current Activity in a floating window</string>
+
+    <string name="show_tag_button_title">Layout id button</string>
+    <string name="show_tag_button_summary">Show the "snapshot layout ids" button on the floating window</string>
+
+    <string name="target_title">Debug target</string>
+    <string name="target_summary">Show the floating window and record only while this app is in the foreground</string>
+    <string name="target_none">Not selected — monitoring all apps</string>
+    <string name="target_pick">Choose app</string>
+    <string name="target_clear">Clear</string>
+    <string name="target_pick_title">Choose a debug target</string>
+    <string name="target_pick_empty">No launchable apps found</string>
+    <string name="target_search_hint">Search app name or package</string>
+    <string name="target_search_empty">No matching apps</string>
+    <string name="target_selected_toast">Selected: %1$s. Open it to start monitoring.</string>
+
+    <string name="monitor_state_off">Monitoring is off</string>
+    <string name="monitor_state_all">Monitoring all apps</string>
+    <string name="monitor_state_target_active">Target app is in the foreground · monitoring</string>
+    <string name="monitor_state_waiting_target">Waiting for the target app to come to the foreground</string>
+    <string name="monitor_state_no_connection">Accessibility service is not connected</string>
+
+    <string name="accessibility_title">Accessibility service</string>
+    <string name="accessibility_summary">Required to read window changes. If accessibility is lost, try allowing autostart and removing battery restrictions (tested on HyperOS 3).</string>
+    <string name="accessibility_state_connected">Connected</string>
+    <string name="accessibility_state_enabled_not_connected">Enabled but not connected</string>
+    <string name="accessibility_state_disabled">Not enabled</string>
+    <string name="enable_now">Enable now</string>
+    <string name="open_settings">Open settings</string>
+    <string name="button_reconnect">Reconnect</string>
+
+    <string name="keepalive_title">Keep-alive (if accessibility drops)</string>
+    <string name="keepalive_summary">Some systems (including MIUI/HyperOS) restrict background apps, which can cut the accessibility event stream and make the overlay come and go. If accessibility is lost, try enabling “Autostart” and setting the battery policy to “No restrictions”. Tested working on HyperOS 3.</string>
+    <string name="keepalive_battery">Battery policy</string>
+    <string name="keepalive_autostart">Autostart</string>
+    <string name="keepalive_battery_hint">On the app info page, open “Battery saver” and choose “No restrictions”.</string>
+    <string name="keepalive_autostart_failed">Autostart page not found; opened app info instead.</string>
+    <string name="keepalive_battery_checking">Battery policy: checking…</string>
+    <string name="keepalive_battery_ok">Battery policy: unrestricted ✓</string>
+    <string name="keepalive_battery_bad">Battery policy: NOT unrestricted — the floating window will stop updating</string>
+    <string name="keepalive_autostart_status">Autostart: some systems (e.g. HyperOS) do not expose its state; please confirm it is enabled</string>
+
+    <string name="history_title">Recent changes</string>
+    <string name="history_empty">No records yet</string>
+    <string name="clear_history">Clear</string>
+    <string name="copy_activity">Copy</string>
+    <string name="toast_copied">Copied to clipboard</string>
+
+    <string name="principle">How it works: Android has no public API to read another app\'s foreground Activity. This app listens for window state change events through an AccessibilityService. With a debug target selected, it only shows the floating window and records while that app is in the foreground. The floating window uses TYPE_ACCESSIBILITY_OVERLAY, so it needs no draw-over-other-apps permission.</string>
+
+    <string name="accessibility_description">Reads window change events to show the current app package and Activity name in a floating window.</string>
+
+    <string name="dialog_accessibility_title">Accessibility service required</string>
+    <string name="dialog_accessibility_message">Enable “Current Page” in Accessibility settings, then come back to this app.</string>
+    <string name="dialog_accessibility_positive">Open settings</string>
+    <string name="dialog_accessibility_negative">Cancel</string>
+
+    <string name="dialog_reconnect_title">Accessibility service is not connected</string>
+    <string name="dialog_reconnect_message">The system says the service is enabled, but it is not actually connected. This usually happens when the system recycles the app (common on MIUI/HyperOS). Turn the “Current Page” switch off and on again in Accessibility settings. Also allow autostart and remove battery restrictions to reduce the chance of it happening again.</string>
+
+    <string name="overlay_waiting">Waiting for window change…</string>
+    <string name="overlay_tag_button">ID</string>
+    <string name="overlay_expand">Expand</string>
+    <string name="overlay_collapse">Collapse</string>
+    <string name="toast_no_ids">No layout ids found on this page</string>
+
+    <string name="tile_subtitle_idle">Not monitoring</string>
+    <string name="tile_subtitle_all">Monitoring all apps</string>
+    <string name="tile_subtitle_target">Monitoring: %1$s</string>
+    <string name="tile_subtitle_waiting">Waiting for %1$s</string>
+
+    <string name="shortcut_toggle_short">Toggle monitor</string>
+    <string name="shortcut_toggle_long">Toggle Activity monitor</string>
+</resources>
