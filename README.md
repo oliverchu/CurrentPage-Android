@@ -115,6 +115,8 @@ RELEASE_KEY_PASSWORD=***
 
 `keystore/` 与 `local.properties` 都不会进入仓库；CI 上没有这些属性时会自动退回未签名 Release。
 
+本地配置了签名时，**debug 构建也会使用同一把 release key**，这样 debug 和 release APK 可以互相覆盖安装；未配置时 debug 仍使用默认 debug key。
+
 如果没有现成 keystore，可以自己生成一个（密码不要写进命令历史/仓库）：
 
 ```bash

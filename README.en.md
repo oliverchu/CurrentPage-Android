@@ -115,6 +115,8 @@ RELEASE_KEY_PASSWORD=***
 
 `keystore/` and `local.properties` are never committed; CI automatically falls back to an unsigned release when these properties are absent.
 
+When signing is configured locally, **debug builds use the same release key**, so debug and release APKs can be installed over each other. Without the local signing properties, debug keeps using the default debug key.
+
 If you do not have a keystore yet, generate one (keep the password out of shell
 history and the repository):
 

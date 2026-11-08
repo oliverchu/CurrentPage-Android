@@ -52,13 +52,21 @@ android {
     }
 
     buildTypes {
+        debug {
+            // 本地配置了 release 签名时，debug 也使用同一把 key，
+            // 方便 debug/release 互相覆盖安装；CI 无配置时回退默认 debug key。
+            if (hasReleaseSigning) {
+                signingConfig = signingConfigs.getByName("release")
+            }
+        }
         release {
             if (hasReleaseSigning) {
                 signingConfig = signingConfigs.getByName("release")
             }
             optimization {
+                // 不指定 packageScope：AGP 9 的跨包重打包会把 Kotlin 集合类
+                // 挪进 kotlin.collections，导致 release 启动时 IllegalAccessError。
                 enable = true
-                packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
             }
         }
     }
